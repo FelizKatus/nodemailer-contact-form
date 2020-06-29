@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tailwind/Nodemailer Contact Form</title>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body class="h-screen">
+  <div class="container flex m-auto h-full w-full justify-center items-center">
+
+    <form class="w-6/12" method="POST" action="/">
+      <div class="md:flex md:items-center mb-6">
+        <div class="md:w-1/5">
+          <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-name">
+            Nombre
+          </label>
+        </div>
+        <div class="md:w-4/5">
+          <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-name" name="name" type="text" value="Jane Doe" required>
+        </div>
+      </div>
+      <div class="md:flex md:items-center mb-6">
+        <div class="md:w-1/5">
+          <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-email">
+            Email
+          </label>
+        </div>
+        <div class="md:w-4/5">
+          <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-email" name="email" type="text" value="janedoe@gmail.com" required>
+        </div>
+      </div>
+      <div class="md:flex md:items-center mb-6">
+        <div class="md:w-1/5">
+          <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-message">
+            Mensaje
+          </label>
+        </div>
+        <div class="md:w-4/5">
+          <textarea rows="6" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-message" name="message" placeholder="Mensaje" required></textarea>
+        </div>
+      </div>
+      <div class="flex items-center mb-6">
+        <div class="md:w-1/5"></div>
+        <label class="md:w-4/5 block text-gray-500 font-bold">
+          <input class="form-checkbox mr-2 leading-tight text-purple-400" type="checkbox" name="human" value="false" required>
+          <span class="text-sm">
+            Soy humano
+          </span>
+        </label>
+      </div>
+      <div class="flex items-center">
+        <div class="md:w-1/5"></div>
+        <div class="md:w-4/5">
+          <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
+            Enviar
+          </button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</body>
+</html>
