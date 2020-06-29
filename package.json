@@ -15,9 +15,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^4.0.4",
     "nodemailer": "^6.4.10",
-    "nodemon": "^2.0.4",
-    "tailwindcss": "^1.4.6",
-    "@tailwindcss/custom-forms": "^0.2.1"
+    "nodemon": "^2.0.4"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
@@ -30,6 +28,8 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "prettier": "^2.0.5",
-    "prettier-babel": "^1.0.0"
+    "prettier-babel": "^1.0.0",
+    "tailwindcss": "^1.4.6",
+    "@tailwindcss/custom-forms": "^0.2.1"
   }
 }
