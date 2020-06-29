@@ -13,14 +13,27 @@ Simple formulario de contactos con protección del SPAM. Se desarrolla con las s
 
 #### Como arrancar
 
-<code>yarn</code>
-<code>yarn run app</code>
+<pre><code>
+  yarn
+  yarn run app
+</code></pre>
 
 Para recibir los correos a su cuenta de Google hay que permitir el acceso de aplicaciones poco seguras:
 
 <a href="https://myaccount.google.com/lesssecureapps" target="_blank">
   https://myaccount.google.com/lesssecureapps
 </a>
+
+También es necesario crear el fichero <code>credentials.js</code> con el siguiente contenido:
+
+<pre><code>
+  module.exports = {
+    gmail: {
+      user: 'su correo de Gmail',
+      password: 'su contraseña de Gmail'
+    }
+  }
+</code></pre>
 
 #### Licensia:
 

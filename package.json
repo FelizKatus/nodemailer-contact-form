@@ -16,10 +16,10 @@
     "express-handlebars": "^4.0.4",
     "nodemailer": "^6.4.10",
     "nodemon": "^2.0.4",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^1.4.6",
+    "@tailwindcss/custom-forms": "^0.2.1"
   },
   "devDependencies": {
-    "@tailwindcss/custom-forms": "^0.2.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
