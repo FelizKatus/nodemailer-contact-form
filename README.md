@@ -1,6 +1,6 @@
 # Tailwind/Nodemailer Contact Form
 
-Simple formulario de contactos con protección del SPAM. Se desarrolla con las siguientes fantasticas tecnologías:
+Simple formulario de contactos con protección del SPAM y CSRF. Se desarrolla con las siguientes fantasticas tecnologías:
 
 * Node/Express
 * Nodemailer
@@ -9,7 +9,9 @@ Simple formulario de contactos con protección del SPAM. Se desarrolla con las s
 
 #### De la caja
 
+* Validación de formularios del lado del cliente y del servidor
 * Protección del SPAM
+* Protección del CSRF
 
 #### Como arrancar
 
@@ -28,6 +30,7 @@ También es necesario crear el fichero <code>credentials.js</code> con el siguie
 
 <pre><code>
   module.exports = {
+    cookieSecret: 'frase secreta',
     gmail: {
       user: 'su correo de Gmail',
       password: 'su contraseña de Gmail'
