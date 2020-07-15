@@ -26,6 +26,27 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
+// Cookies, Sessions
+
+app.use(require('cookie-parser')(credentials.cookieSecret))
+app.use(
+  require('express-session')({
+    resave: false,
+    saveUninitialized: false,
+    secret: credentials.cookieSecret
+  })
+)
+
+// CSURF
+
+app.use(require('csurf')())
+
+app.use((req, res, next) => {
+  // eslint-disable-next-line no-underscore-dangle
+  res.locals._csrfToken = req.csrfToken()
+  next()
+})
+
 // Routing
 
 app.get('/', (req, res) => {
