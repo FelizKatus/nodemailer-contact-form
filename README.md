@@ -12,6 +12,7 @@ Simple formulario de contactos con protección del SPAM y CSRF. Se desarrolla co
 * Validación de formularios del lado del cliente y del servidor
 * Protección del SPAM
 * Protección del CSRF
+* Mensajes flash
 
 #### Como arrancar
 
