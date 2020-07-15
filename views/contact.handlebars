@@ -12,8 +12,35 @@
 <body class="h-screen">
   <div class="container flex m-auto h-full w-full justify-center items-center">
 
+
     <form class="w-6/12" method="POST" action="/">
       <input type="hidden" name="_csrf" value="{{_csrfToken}}">
+      <div class="md:flex md:items-center mb-6">
+        <div class="md:w-1/5">
+        </div>
+        <div class="md:w-4/5">
+          <!-- Flash -->
+          {{#if flash}}
+            <div class="bg-blue-100 border-t-4 border-blue-300 rounded-b-lg px-4 py-3 shadow-md" role="alert">
+              <div class="flex">
+                <div class="py-1">
+                  <svg class="fill-current h-6 w-6 text-blue-300 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-bold text-blue-800">
+                    {{flash.intro}}
+                  </p>
+                  <p class="text-sm">
+                    {{flash.message}}
+                  </p>
+                </div>
+              </div>
+            </div>
+          {{/if}}<!-- /Flash -->
+        </div>
+      </div>
       <div class="md:flex md:items-center mb-6">
         <div class="md:w-1/5">
           <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-name">
@@ -49,7 +76,7 @@
         <label class="md:w-4/5 block text-gray-500 font-bold">
           <input class="form-checkbox mr-2 leading-tight text-purple-400" type="checkbox" name="human" value="false" required>
           <span class="text-sm">
-            Soy humano
+            Soy un humano
           </span>
         </label>
       </div>

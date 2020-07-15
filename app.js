@@ -47,6 +47,14 @@ app.use((req, res, next) => {
   next()
 })
 
+// Flash
+
+app.use((req, res, next) => {
+  res.locals.flash = req.session.flash
+  delete req.session.flash
+  next()
+})
+
 // Routing
 
 app.get('/', (req, res) => {
@@ -78,14 +86,26 @@ app.post('/', (req, res) => {
 
     mailTransport.sendMail(mailOptions, (error, info) => {
       if (error) {
+        req.session.flash = {
+          intro: 'Lo sentimos...',
+          message: 'El mensaje no se ha podido enviar.'
+        }
         console.log(`Message could not be sent: ${error}`)
         res.redirect('/')
       } else {
+        req.session.flash = {
+          intro: '¡Gracias!',
+          message: 'El mensaje está enviado con éxito.'
+        }
         console.log(`Message sent: ${info.response}`)
         res.redirect('/')
       }
     })
   } else {
+    req.session.flash = {
+      intro: '¡Error!',
+      message: 'Tienes que confirmar que eres un humano.'
+    }
     console.log('false')
     res.redirect('/')
   }
