@@ -1,6 +1,6 @@
 # Tailwind/Nodemailer Contact Form
 
-Simple formulario de contactos con protección del SPAM y CSRF. Se desarrolla con las siguientes fantasticas tecnologías:
+Formulario de contactos con protección del SPAM y CSRF. Se desarrolla con las siguientes fantasticas tecnologías:
 
 * Node/Express
 * Nodemailer
